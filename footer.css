@@ -1,0 +1,222 @@
+.footer {
+  padding-top: 80px;
+  background-color: #000;
+}
+
+.footer-background {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 500px;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 20px 40px;
+}
+
+.logo-hover {
+  height: 80px;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.logo-hover:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.footer__logo__name {
+  margin-bottom: 25px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.footer__logo__name::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #071739, #043575);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  position: relative; /* Ensures tooltip is positioned relative to icon */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: linear-gradient(45deg, #071739, #043575) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(18, 19, 19, 0.3);
+}
+
+.social-tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.social-icon:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: -40px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-item:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #071739, #043575);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg,  #071739, #043575);
+  box-shadow: 0 5px 15px rgba(18, 19, 19, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    gap: 40px;
+    padding: 0 15px 30px;
+  }
+  
+  .logo-hover {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px 30px;
+  }
+  
+  .logo-hover {
+    height: 50px;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 50px;
+  }
+  
+  .footer-content {
+    padding: 0 10px 20px;
+  }
+  
+  .logo-hover {
+    height: 40px;
+  }
+  
+  .social-links {
+    gap: 12px;
+  }
+  
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
